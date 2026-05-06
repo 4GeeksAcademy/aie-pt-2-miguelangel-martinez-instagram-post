@@ -1,0 +1,286 @@
+:root {
+	--bg-color: #f1f3f5;
+	--card-color: #ffffff;
+	--text-main: #111111;
+	--text-secondary: #555555;
+	--border: #dbdbdb;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: radial-gradient(circle at top, #ffffff 0%, var(--bg-color) 65%);
+	color: var(--text-main);
+}
+
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	padding: 24px;
+}
+
+.site-header {
+	width: 100%;
+	max-width: 420px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 16px;
+	border-radius: 14px;
+	background: linear-gradient(135deg, #ffd9a8 0%, #ffffff 45%, #d7ebff 100%);
+	border: 1px solid #e9d9c0;
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.site-header-info {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.site-kicker {
+	margin: 0;
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #9a4f00;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.45rem;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.session-user {
+	margin: 0;
+	font-size: 0.76rem;
+	color: #374151;
+}
+
+.site-header-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8px;
+}
+
+.switch-user-button {
+	border: 0;
+	background: #053d75;
+	color: #ffffff;
+	font-size: 0.72rem;
+	font-weight: 700;
+	padding: 6px 10px;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.switch-user-button:hover,
+.switch-user-button:focus-visible {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 10px rgba(5, 61, 117, 0.28);
+	outline: none;
+}
+
+.profile-link {
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: #053d75;
+	text-decoration: none;
+	padding: 7px 11px;
+	border-radius: 999px;
+	background: #ffffff;
+	border: 1px solid #b7d4f2;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-link:hover,
+.profile-link:focus-visible {
+	transform: translateY(-1px);
+	border-color: #7ab1e5;
+	box-shadow: 0 6px 12px rgba(5, 61, 117, 0.18);
+	outline: none;
+}
+
+.instagram-post {
+	width: 100%;
+	max-width: 420px;
+	background: var(--card-color);
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.post-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 14px;
+	border-bottom: 1px solid var(--border);
+}
+
+.profile-pic {
+	width: 44px;
+	height: 44px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid #ff7b00;
+}
+
+.profile-name {
+	font-size: 0.95rem;
+	font-weight: 700;
+}
+
+.post-body {
+	background: #f8f9fa;
+}
+
+.post-image {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
+.post-footer {
+	padding: 12px 14px 16px;
+}
+
+.post-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.left-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.icon-button {
+	border: 0;
+	background: transparent;
+	padding: 4px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon-button svg {
+	width: 25px;
+	height: 25px;
+	fill: #222222;
+	transition: fill 0.2s ease;
+}
+
+.icon-button:hover svg {
+	fill: #ff3b30;
+}
+
+.caption {
+	margin: 0;
+	font-size: 0.94rem;
+	line-height: 1.45;
+	color: var(--text-secondary);
+}
+
+.caption strong {
+	color: var(--text-main);
+	margin-right: 6px;
+}
+
+.site-footer {
+	width: 100%;
+	max-width: 420px;
+	padding: 14px 16px;
+	border-radius: 14px;
+	background: #ffffff;
+	border: 1px solid var(--border);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 4px;
+}
+
+.legal-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.legal-links a {
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: #444444;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.legal-links a:hover,
+.legal-links a:focus-visible {
+	color: #111111;
+	border-color: #111111;
+	outline: none;
+}
+
+.site-author {
+	margin: 0;
+	font-size: 0.84rem;
+	color: #5a5a5a;
+}
+
+@media (max-width: 480px) {
+	.page {
+		padding: 10px;
+	}
+
+	.site-title {
+		font-size: 1.15rem;
+	}
+
+	.site-header {
+		padding: 12px;
+		align-items: flex-start;
+	}
+
+	.site-header-actions {
+		gap: 6px;
+	}
+
+	.profile-link {
+		padding: 6px 9px;
+		font-size: 0.8rem;
+	}
+
+	.switch-user-button {
+		font-size: 0.68rem;
+	}
+
+	.instagram-post {
+		border-radius: 10px;
+	}
+
+	.site-footer {
+		border-radius: 10px;
+		padding: 12px;
+	}
+}
